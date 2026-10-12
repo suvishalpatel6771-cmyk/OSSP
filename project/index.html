@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Process Life Cycle Project</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP HEADER -->
+    <header class="top-header">
+
+        <div class="logo">
+            <div class="logo-icon">⚙</div>
+
+            <span>Process Life Cycle Project</span>
+        </div>
+
+        <div class="top-flow">
+            Creation
+            <span>→</span>
+            Execution
+            <span>→</span>
+            Waiting
+            <span>→</span>
+            Termination
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="menu active" onclick="showPage('home')">
+                <span>⌂</span>
+                Home
+            </div>
+
+            <div class="menu" onclick="showPage('creation')">
+                <span>＋</span>
+                Process Creation
+            </div>
+
+            <div class="menu" onclick="showPage('execution')">
+                <span>▶</span>
+                Process Execution
+            </div>
+
+            <div class="menu" onclick="showPage('waiting')">
+                <span>◷</span>
+                Process Waiting
+            </div>
+
+            <div class="menu" onclick="showPage('termination')">
+                <span>■</span>
+                Process Termination
+            </div>
+
+            <div class="menu" onclick="showPage('about')">
+                <span>ⓘ</span>
+                About
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <h3>Operating System</h3>
+
+                <p>
+                    Process Life Cycle
+                    Mini Project
+                </p>
+
+                <small>
+                    Demonstrating the life cycle
+                    of a process in C.
+                </small>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+        <main class="content">
+
+
+            <!-- HOME PAGE -->
+            <section id="home" class="page active-page">
+
+                <div class="hero">
+
+                    <div class="hero-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <h1>
+                            Process Life Cycle
+                            <span>Project</span>
+                        </h1>
+
+                        <p>
+                            This project demonstrates the complete life cycle
+                            of a process in an Operating System using C language.
+                        </p>
+
+                        <p>
+                            It covers process creation, execution,
+                            waiting and termination.
+                        </p>
+
+                    </div>
+
+                    <div class="environment">
+
+                        <div>
+                            <b>Language</b>
+                            <br>
+                            C
+                        </div>
+
+                        <div>
+                            <b>Platform</b>
+                            <br>
+                            Linux / WSL
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROCESS CARDS -->
+
+                <div class="process-flow">
+
+                    <div class="process-card creation">
+
+                        <div class="number">1</div>
+
+                        <div class="card-icon">
+                            👥
+                        </div>
+
+                        <h2>Process Creation</h2>
+
+                        <p>
+                            A parent process creates
+                            a child process using fork().
+                        </p>
+
+                        <div class="code-box">
+                            fork()
+                        </div>
+
+                        <button onclick="showPage('creation')">
+                            View Details
+                        </button>
+
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="process-card execution">
+
+                        <div class="number">2</div>
+
+                        <div class="card-icon">
+                            ▶
+                        </div>
+
+                        <h2>Process Execution</h2>
+
+                        <p>
+                            The child process executes
+                            another program using exec().
+                        </p>
+
+                        <div class="code-box">
+                            exec()
+                        </div>
+
+                        <button onclick="showPage('execution')">
+                            View Details
+                        </button>
+
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="process-card waiting">
+
+                        <div class="number">3</div>
+
+                        <div class="card-icon">
+                            ◷
+                        </div>
+
+                        <h2>Process Waiting</h2>
+
+                        <p>
+                            The parent waits for the
+                            child process using wait().
+                        </p>
+
+                        <div class="code-box">
+                            wait()
+                        </div>
+
+                        <button onclick="showPage('waiting')">
+                            View Details
+                        </button>
+
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="process-card termination">
+
+                        <div class="number">4</div>
+
+                        <div class="card-icon">
+                            ■
+                        </div>
+
+                        <h2>Process Termination</h2>
+
+                        <p>
+                            The process finishes using
+                            the termination mechanism.
+                        </p>
+
+                        <div class="code-box">
+                            exit()
+                        </div>
+
+                        <button onclick="showPage('termination')">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INFORMATION BAR -->
+
+                <div class="information-bar">
+
+                    <div>
+                        <h3>⚙ System Calls Used</h3>
+
+                        <p>
+                            fork() | exec() | wait() | exit()
+                        </p>
+
+                        <p>
+                            getpid() | getppid()
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <h3>📁 Project Files</h3>
+
+                        <p>
+                            Separate C Files
+                        </p>
+
+                        <p>
+                            Modular Design
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <h3>📊 Output</h3>
+
+                        <p>
+                            4 Process Stages
+                        </p>
+
+                        <p>
+                            Creation → Execution → Termination
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <h3>💻 Environment</h3>
+
+                        <p>
+                            VS Code + GCC
+                        </p>
+
+                        <p>
+                            Linux / WSL
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CREATION PAGE -->
+
+            <section id="creation" class="page">
+
+                <h1>Process Creation</h1>
+
+                <p class="page-description">
+                    Process creation is performed using the fork()
+                    system call.
+                </p>
+
+                <div class="detail-card blue">
+
+                    <h2>fork()</h2>
+
+                    <p>
+                        The fork() system call creates a new child
+                        process from the parent process.
+                    </p>
+
+                    <div class="flow-box">
+
+                        Parent Process
+
+                        <strong>↓</strong>
+
+                        fork()
+
+                        <strong>↓</strong>
+
+                        <div class="two-processes">
+
+                            <div>
+                                Parent Process
+                                <br>
+                                PID: <span id="parentPID">----</span>
+                            </div>
+
+                            <div>
+                                Child Process
+                                <br>
+                                PID: <span id="childPID">----</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button onclick="simulateCreation()">
+                        Create Process
+                    </button>
+
+                    <p id="creationResult"></p>
+
+                </div>
+
+            </section>
+
+
+            <!-- EXECUTION PAGE -->
+
+            <section id="execution" class="page">
+
+                <h1>Process Execution</h1>
+
+                <p class="page-description">
+                    The child process executes a program using exec().
+                </p>
+
+                <div class="detail-card green">
+
+                    <h2>exec()</h2>
+
+                    <p>
+                        exec() replaces the current process program
+                        with another executable program.
+                    </p>
+
+                    <div class="terminal-box">
+
+                        <p>$ ./process_project</p>
+
+                        <p>Child process created...</p>
+
+                        <p>Executing program...</p>
+
+                        <p class="success">
+                            ✓ exec() executed successfully
+                        </p>
+
+                    </div>
+
+                    <button onclick="simulateExecution()">
+                        Execute Process
+                    </button>
+
+                    <p id="executionResult"></p>
+
+                </div>
+
+            </section>
+
+
+            <!-- WAITING PAGE -->
+
+            <section id="waiting" class="page">
+
+                <h1>Process Waiting</h1>
+
+                <p class="page-description">
+                    The parent process waits for the child
+                    process to complete.
+                </p>
+
+                <div class="detail-card orange">
+
+                    <h2>wait()</h2>
+
+                    <div class="flow-box">
+
+                        Parent Process
+
+                        <strong>↓</strong>
+
+                        wait()
+
+                        <strong>↓</strong>
+
+                        Child Process
+
+                        <strong>↓</strong>
+
+                        Execution Completed
+
+                    </div>
+
+                    <button onclick="simulateWaiting()">
+                        Start Waiting
+                    </button>
+
+                    <p id="waitingResult"></p>
+
+                </div>
+
+            </section>
+
+
+            <!-- TERMINATION PAGE -->
+
+            <section id="termination" class="page">
+
+                <h1>Process Termination</h1>
+
+                <p class="page-description">
+                    After execution, the process terminates
+                    successfully.
+                </p>
+
+                <div class="detail-card purple">
+
+                    <h2>exit()</h2>
+
+                    <div class="terminal-box">
+
+                        <p>Child Process</p>
+
+                        <p>↓</p>
+
+                        <p>Execution Completed</p>
+
+                        <p>↓</p>
+
+                        <p class="danger">
+                            Process Terminated
+                        </p>
+
+                        <p class="success">
+                            Exit Status: 0
+                        </p>
+
+                    </div>
+
+                    <button onclick="simulateTermination()">
+                        Terminate Process
+                    </button>
+
+                    <p id="terminationResult"></p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ABOUT -->
+
+            <section id="about" class="page">
+
+                <h1>About Project</h1>
+
+                <div class="about-card">
+
+                    <h2>Process Life Cycle</h2>
+
+                    <p>
+                        This Operating Systems mini-project
+                        demonstrates process creation, execution,
+                        synchronization and termination.
+                    </p>
+
+                    <h3>Technologies</h3>
+
+                    <p>
+                        C Language
+                    </p>
+
+                    <p>
+                        GCC Compiler
+                    </p>
+
+                    <p>
+                        Linux / WSL
+                    </p>
+
+                    <h3>System Calls</h3>
+
+                    <p>
+                        fork() • exec() • wait() • exit()
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <footer>
+
+        Process Life Cycle Project
+
+        <span>
+            Operating System and System Programming
+        </span>
+
+        <b>
+            Build • Execute • Terminate
+        </b>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
